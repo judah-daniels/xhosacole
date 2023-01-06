@@ -1,6 +1,7 @@
 /* [Master Stylesheet - v1.0] */
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i");
 /* :: 2.0 Import All CSS */
 @import url(css/bootstrap.min.css);
 @import url(css/classy-nav.css);
@@ -16,22 +17,30 @@
   padding: 0; }
 
 body {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px; }
+html {
+	scroll-behavior: smooth;
+}
 
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #000000;
   line-height: 1.3;
   font-weight: 700; }
 
 p {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #5f5f5f;
   font-size: 15px;
   line-height: 2;
@@ -47,7 +56,7 @@ a:focus {
   color: #000000;
   font-weight: 700;
   font-size: 16px;
-  font-family: "Archivo Narrow", sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 ul,
 ol {
@@ -425,22 +434,51 @@ img {
         @media only screen and (max-width: 767px) {
           .header-area .oneMusic-main-menu .classy-navbar .classynav ul li .dropdown li .dropdown li .dropdown li a {
             border-bottom-color: rgba(255, 255, 255, 0.1) !important; } }
-    .header-area .oneMusic-main-menu .login-register-cart-button {
+    .header-area .oneMusic-main-menu .menu-socials {
       position: relative;
       z-index: 1;
       margin-left: 100px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .header-area .oneMusic-main-menu .login-register-cart-button {
+        .header-area .oneMusic-main-menu .menu-socials {
           margin-left: 12px;
           margin-top: 15px; } }
       @media only screen and (max-width: 767px) {
-        .header-area .oneMusic-main-menu .login-register-cart-button {
+        .header-area .oneMusic-main-menu .menu-socials {
           margin-left: 12px;
           margin-top: 15px; } }
-      .header-area .oneMusic-main-menu .login-register-cart-button .login-register-btn {
+
+    .header-area .oneMusic-main-menu .menu-socials .contact-social-info a {
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 22px;
+      color: #fff; }
+      .header-area .oneMusic-main-menu .menu-socials .contact-social-info a:hover, .header-area .oneMusic-main-menu .menu-socials .contact-social-info a:focus {
+        color: #aaa; }
+    .header-area .oneMusic-main-menu .menu-socials .single-contact-info {
+      position: relative;
+      margin-bottom: 20px; }
+      .header-area .oneMusic-main-menu .menu-socials .single-contact-info:last-child {
+        margin-bottom: 0; }
+      .header-area .oneMusic-main-menu .menu-socials .single-contact-info p {
+        font-size: 15px;
+        margin-bottom: 0; }
+      .header-area .oneMusic-main-menu .menu-socials .single-contact-info .icon {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35px;
+        flex: 0 0 35px;
+        max-width: 35px;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #000;
+        text-align: center; }
+        .header-area .oneMusic-main-menu .menu-socials .single-contact-info .icon span {
+          font-size: 20px;
+          line-height: 33px; }
+
+      .header-area .oneMusic-main-menu .menu-socials .login-register-btn {
         position: relative;
         z-index: 10; }
-        .header-area .oneMusic-main-menu .login-register-cart-button .login-register-btn a {
+        .header-area .oneMusic-main-menu .menu-socials .login-register-btn a {
           -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
           margin-bottom: 0;
@@ -449,12 +487,12 @@ img {
           font-size: 16px;
           cursor: pointer;
           line-height: 1; }
-          .header-area .oneMusic-main-menu .login-register-cart-button .login-register-btn a:hover, .header-area .oneMusic-main-menu .login-register-cart-button .login-register-btn a:focus {
+          .header-area .oneMusic-main-menu .menu-socials .login-register-btn a:hover, .header-area .oneMusic-main-menu .menu-socials .login-register-btn a:focus {
             color: rgba(255, 255, 255, 0.7); }
-      .header-area .oneMusic-main-menu .login-register-cart-button .cart-btn {
+      .header-area .oneMusic-main-menu .menu-socials .cart-btn {
         position: relative;
         z-index: 10; }
-        .header-area .oneMusic-main-menu .login-register-cart-button .cart-btn p {
+        .header-area .oneMusic-main-menu .menu-socials .cart-btn p {
           -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
           margin-bottom: 0;
@@ -462,9 +500,9 @@ img {
           font-size: 18px;
           cursor: pointer;
           line-height: 1; }
-          .header-area .oneMusic-main-menu .login-register-cart-button .cart-btn p:hover, .header-area .oneMusic-main-menu .login-register-cart-button .cart-btn p:focus {
+          .header-area .oneMusic-main-menu .menu-socials .cart-btn p:hover, .header-area .oneMusic-main-menu .menu-socials .cart-btn p:focus {
             color: rgba(255, 255, 255, 0.7); }
-          .header-area .oneMusic-main-menu .login-register-cart-button .cart-btn p .quantity {
+          .header-area .oneMusic-main-menu .menu-socials .cart-btn p .quantity {
             width: 15px;
             height: 15px;
             border: 1px solid #fff;
@@ -555,7 +593,18 @@ img {
     bottom: 0; }
   .single-hero-slide .hero-slides-content {
     display: inline-block;
-    width: 100%; }
+    width: 100%; 
+   }
+    .single-hero-slide .hero-slides-content img {
+      max-width: 300px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-bottom: 20px; }
+      @media only screen and (max-width: 767px) {
+        .single-hero-slide .hero-slides-content img {
+          width: 50px; } }
     .single-hero-slide .hero-slides-content h6 {
       font-size: 18px;
       color: #fff;
@@ -574,8 +623,8 @@ img {
       margin-bottom: 0;
       font-weight: 400;
       display: block;
-      text-transform: capitalize;
-      letter-spacing: 30px;
+      /* text-transform: capitalize; */
+      /* letter-spacing: 10px; */
       overflow: hidden; }
       .single-hero-slide .hero-slides-content h2 span {
         position: absolute;
@@ -622,9 +671,13 @@ img {
   100% {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); } }
-.single-hero-slide .slide-img {
-  -webkit-animation: slide 12s linear infinite;
-  animation: slide 12s linear infinite; }
+/* .slide-img { */
+  /* -webkit-animation: slide 12s linear ; */
+  /* animation: slide 12s linear ; } */
+
+/* .single-hero-slide { */
+/*   -webkit-animation: slide 12s linear infinite; */
+/*   animation: slide 12s linear infinite; } */
 
 @-webkit-keyframes slide {
   0% {
@@ -646,6 +699,131 @@ img {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+
+/* :: 5.5 Featured Video Area CSS */
+.featured-video-area {
+  position: relative;
+  z-index: 1;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms; }
+  .featured-video-area iframe {
+    width: 100%;
+    height: auto}
+  .featured-video-area .event-text {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 30px 15px;
+    background-color: #000;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms; }
+    .single-event-area .event-text h4 {
+      color: #fff;
+      text-transform: uppercase;
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms; }
+
+.featured-video-area .vid-container {
+ position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.featured-video-area iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  border:0;
+}
+
+.ibeji-album-area {
+  background-image: url(img/xhosadarkrightsax.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 100%; */
+  overflow:auto;
+
+  /* position: relative; */
+  }
+  /* @media only screen and (min-width: 992px) and (max-width: 1199px) { */
+  /*   .ibeji-album-area { */
+  /*     height: 700px; } } */
+  /* @media only screen and (min-width: 768px) and (max-width: 991px) { */
+  /*   .ibeji-album-area { */
+  /*     height: 650px; } } */
+  /* @media only screen and (max-width: 767px) { */
+  /*   .ibeji-album-area { */
+  /*     height: 500px; } } */
+.ibeji-album-area h2 {
+  color: #FFF;
+  letter-spacing: 15px;
+  font-size: 62px;
+}
+.ibeji-album-area p {
+  color: #FFF;
+}
+.ibeji-album-area .album-container {
+ position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  display: flex;
+  justify-content: center
+}
+.ibeji-album-area iframe {
+  color: #FFF;
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    height: 50%;
+  border:0;
+}
+
+.ktku-album-area {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(img/quartet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top:200px;
+  /* height: 100%; */
+
+  /* position: relative; */
+  }
+  /* @media only screen and (min-width: 992px) and (max-width: 1199px) { */
+  /*   .iibeji-album-areabeji-album-area { */
+  /*     height: 700px; } } */
+  /* @media only screen and (min-width: 768px) and (max-width: 991px) { */
+  /*   .ibeji-album-area { */
+  /*     height: 650px; } } */
+  /* @media only screen and (max-width: 767px) { */
+  /*   .ibeji-album-area { */
+  /*     height: 500px; } } */
+.ktku-album-area h2 {
+  color: #FFF;
+  letter-spacing: 15px;
+  font-size: 62px;
+}
+.ktku-album-area p {
+  color: #FFF;
+  /* font-size:px */
+}
+.ktku-album-area .album-container {
+ position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  display: flex;
+  justify-content: center
+}
+.ktku-album-area iframe {
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    height: 50%;
+  border:0;
+}
+
+
 /* :: 6.0 Buy Now Area CSS */
 .oneMusic-buy-now-area.has-fluid {
   padding-left: 4%;
