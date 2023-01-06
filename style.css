@@ -2,6 +2,7 @@
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i");
 /* :: 2.0 Import All CSS */
 @import url(css/bootstrap.min.css);
 @import url(css/classy-nav.css);
@@ -17,7 +18,7 @@
   padding: 0; }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 14px; }
 html {
 	scroll-behavior: smooth;
@@ -740,6 +741,7 @@ img {
 .ibeji-album-area {
   background-image: url(img/xhosadarkrightsax.jpg);
   background-size: cover;
+  /* background-attachment: local; */
   background-repeat: no-repeat;
   width: 100%;
   /* height: 100%; */
@@ -783,6 +785,7 @@ img {
 .ktku-album-area {
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(img/quartet.jpg);
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
   padding-top:200px;
